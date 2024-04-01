@@ -132,38 +132,6 @@ api.listMeters(siteId, callback);
 
 ## Run SDK Example
 
-### Get Meters
-Fetch all meters belonging to which the connected user has access.
-- **file:** Indicates the fileName/API name.
-- **token:** Indicates the Apigee token name.
-- **siteId:** Indicates the siteId.
-
- **Syntax**
- ```bash
- node app.js fileName=${fileName}.js siteId=${siteId} token=${token}
- ```
-**Example**
-```bash
- node app.js fileName=GetMeters siteId=5664b4a1-85be-44e7-8111-8230a7259fd1 token=gA2kT9WyBOf4iisNQ9OpvtIkewlg
- ```
-
-### Get Performance Score
-The objective is to return the scores (average, daily, monthly, yearly) and based on category(energy) upon siteId.
-- **file:** Indicates the fileName/API name.
-- **token:** Indicates the Apigee token name.
-- **siteId:** Indicates the siteId.
-- **type:** Indicates the type.
-- **category:** Indicates the catefory.
-
-
- **Syntax**
- ```bash
- node app.js file=${fileName} siteId=${siteId} token=${accessToken} type=${type} category=${category}
- ```
-**Example**
-```bash
- node app.js file=GetPerformanceScore siteId=e806c0dd-9103-44d7-af93-2d06946c8cde token=1NGRmytRnGR0T1J6MVMZtuA2x6Aw type=daily category=energy
- ```
 ### Get Sites
 Fetch all sites belonging to which the connected user has access, along site metadata like address, geolocation, gross area, building occupants, operating hours, etc
 
@@ -178,6 +146,7 @@ Fetch all sites belonging to which the connected user has access, along site met
 ```bash
  node app.js file=GetSites token=gA2kT9WyBOf4iisNQ9OpvtIkewlg
  ```
+
  ### Get Time Series
 Fetch all timeseries belonging to which the connected user has access.
 - **file:** Indicates the fileName/API name.
@@ -195,6 +164,38 @@ Fetch all timeseries belonging to which the connected user has access.
  node app.js file=GetTimeSeries siteId=b78cfbfe-29eb-4b5d-80eb-d5a1030ceef updatedAtLte=2023-11-24T12:08:56.235-07:00 updatedAtGte=2021-06-01T12:08:56.235-07:00 token=NiNAQ9u9LR6kOT2lSv4uomnfxcz9
  ```
 
+### Get Meters
+Fetch all meters belonging to which the connected user has access.
+- **file:** Indicates the fileName/API name.
+- **token:** Indicates the Apigee token name.
+- **siteId:** Indicates the siteId.
+
+ **Syntax**
+ ```bash
+ node app.js file=${fileName}.js siteId=${siteId} token=${token}
+ ```
+**Example**
+```bash
+ node app.js file=GetMeters siteId=5664b4a1-85be-44e7-8111-8230a7259fd1 token=gA2kT9WyBOf4iisNQ9OpvtIkewlg
+ ```
+
+ ### Get Performance Score
+The objective is to return the scores (average, daily, monthly, yearly) and based on category(energy) upon siteId.
+- **file:** Indicates the fileName/API name.
+- **token:** Indicates the Apigee token name.
+- **siteId:** Indicates the siteId.
+- **type:** Indicates the type.
+- **category:** Indicates the catefory.
+
+
+ **Syntax**
+ ```bash
+ node app.js file=${fileName} siteId=${siteId} token=${accessToken} type=${type} category=${category}
+ ```
+**Example**
+```bash
+ node app.js file=GetPerformanceScore siteId=e806c0dd-9103-44d7-af93-2d06946c8cde token=1NGRmytRnGR0T1J6MVMZtuA2x6Aw type=daily category=energy
+ ```
 
 ## Documentation for API Endpoints
 
@@ -241,4 +242,3 @@ Authentication schemes defined for the API:
   - write:energy-score: Update access to your site energy score
   - read:energy-score: Read access to your site energy score
   - offline_access: Perform offline operations on behalf of the user
-

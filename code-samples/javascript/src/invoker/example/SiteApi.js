@@ -56,7 +56,7 @@ function throwBadRequestMessageForInvalidParams(param) {
 
 function formatBadRequestErrorMessage(param) {
   let errorMessage = {
-    type: "/sites",
+    type: "/score",
     title: BAD_REQUEST,
     status: STATUS_400,
     detail: param.concat(" cannot be empty"),

@@ -72,7 +72,7 @@ function throwBadRequestMessageForInvalidParams(param) {
 
 function formatBadRequestErrorMessage(param) {
   let errorMessage = {
-    type: "/time-series",
+    type: "/metrics",
     title: BAD_REQUEST,
     status: STATUS_400,
     detail: param.concat(" cannot be empty"),
