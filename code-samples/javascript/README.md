@@ -1,6 +1,6 @@
-# eco_struxure_energy__sustainability_scoring_partner_api
+# Energy Sustainability Scoring partner API
 
-EcoStruxureEnergySustainabilityScoringPartnerApi - JavaScript client for eco_struxure_energy__sustainability_scoring_partner_api
+EcoStruxure Energy Sustainability Scoring Partner API - JavaScript client for eco_struxure_energy__sustainability_scoring_partner_api
 # Overview
 
 EcoStruxure™ Energy and Sustainability Scoring Partner API allows Building Performance Scores Providers to collect, manage and benchmark buildings measurement data in order to deliver energy and sustainability performance scoring to their customers.
@@ -16,9 +16,6 @@ This API enables the following features:
 
 **Meters and measurement types**
 - Retrieve all meters installed at a given site, including the list of measurements and units they support
-
-**Sites registration**
-- Allows the Scoring Partner, to register a site providing the scores related details and thus starting automatically a data pipeline to collect all timeseries related information
 
 **Time series**
 - Retrieve all timeseries for any given site and for an arbitrary time period
@@ -147,6 +144,21 @@ Fetch all sites belonging to which the connected user has access, along site met
  node app.js file=GetSites token=gA2kT9WyBOf4iisNQ9OpvtIkewlg
  ```
 
+ ### Get Meters
+Fetch all meters belonging to which the connected user has access.
+- **file:** Indicates the fileName/API name.
+- **token:** Indicates the Apigee token name.
+- **siteId:** Indicates the siteId.
+
+ **Syntax**
+ ```bash
+ node app.js file=${fileName}.js siteId=${siteId} token=${token}
+ ```
+**Example**
+```bash
+ node app.js file=GetMeters siteId=5664b4a1-85be-44e7-8111-8230a7259fd1 token=gA2kT9WyBOf4iisNQ9OpvtIkewlg
+ ```
+
  ### Get Time Series
 Fetch all timeseries belonging to which the connected user has access.
 - **file:** Indicates the fileName/API name.
@@ -164,28 +176,13 @@ Fetch all timeseries belonging to which the connected user has access.
  node app.js file=GetTimeSeries siteId=b78cfbfe-29eb-4b5d-80eb-d5a1030ceef updatedAtLte=2023-11-24T12:08:56.235-07:00 updatedAtGte=2021-06-01T12:08:56.235-07:00 token=NiNAQ9u9LR6kOT2lSv4uomnfxcz9
  ```
 
-### Get Meters
-Fetch all meters belonging to which the connected user has access.
-- **file:** Indicates the fileName/API name.
-- **token:** Indicates the Apigee token name.
-- **siteId:** Indicates the siteId.
-
- **Syntax**
- ```bash
- node app.js file=${fileName}.js siteId=${siteId} token=${token}
- ```
-**Example**
-```bash
- node app.js file=GetMeters siteId=5664b4a1-85be-44e7-8111-8230a7259fd1 token=gA2kT9WyBOf4iisNQ9OpvtIkewlg
- ```
-
  ### Get Performance Score
 The objective is to return the scores (average, daily, monthly, yearly) and based on category(energy) upon siteId.
 - **file:** Indicates the fileName/API name.
 - **token:** Indicates the Apigee token name.
 - **siteId:** Indicates the siteId.
 - **type:** Indicates the type.
-- **category:** Indicates the catefory.
+- **category:** Indicates the category.
 
 
  **Syntax**
@@ -203,11 +200,10 @@ All URIs are relative to *https://se-exchange-uat-uat.apigee.net/ecostruxure/sco
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*EcoStruxureEnergySustainabilityScoringPartnerApi.MeterApi* | [**listMeters**](docs/MeterApi.md#listMeters) | **GET** /sites/{site-id}/meters | Fetch Meters
-*EcoStruxureEnergySustainabilityScoringPartnerApi.PerformanceScoreApi* | [**listPerformanceScores**](docs/PerformanceScoreApi.md#listPerformanceScores) | **GET** /sites/{site-id}/performance-scores | Fetch Performance Score
 *EcoStruxureEnergySustainabilityScoringPartnerApi.SiteApi* | [**listSites**](docs/SiteApi.md#listSites) | **GET** /sites | Fetch sites
+*EcoStruxureEnergySustainabilityScoringPartnerApi.MeterApi* | [**listMeters**](docs/MeterApi.md#listMeters) | **GET** /sites/{site-id}/meters | Fetch Meters
 *EcoStruxureEnergySustainabilityScoringPartnerApi.TimeseriesApi* | [**listMetrics**](docs/TimeseriesApi.md#listMetrics) | **GET** /sites/{site-id}/timeseries | Fetch Timeseries
-
+*EcoStruxureEnergySustainabilityScoringPartnerApi.PerformanceScoreApi* | [**listPerformanceScores**](docs/PerformanceScoreApi.md#listPerformanceScores) | **GET** /sites/{site-id}/performance-scores | Fetch Performance Score
 
 ## Documentation for Models
 
