@@ -1,6 +1,7 @@
 # Energy Sustainability Scoring partner API
 
-EcoStruxure Energy Sustainability Scoring Partner API - JavaScript client for eco_struxure_energy__sustainability_scoring_partner_api
+EcoStruxure Energy Sustainability Scoring Partner API - JavaScript client for Energy Sustainability Scoring partner API
+
 # Overview
 
 EcoStruxure™ Energy and Sustainability Scoring Partner API allows Building Performance Scores Providers to collect, manage and benchmark buildings measurement data in order to deliver energy and sustainability performance scoring to their customers.
@@ -9,10 +10,8 @@ EcoStruxure™ Energy and Sustainability Scoring Partner API allows Building Per
 
 This API enables the following features:
 
-
 **Sites metadata**
 - Retrieve all sites belonging to which the connected user has access, along site metadata needed for performance scores calculation (e.g. gross area, building occupants, operating hours, etc)
-
 
 **Meters and measurement types**
 - Retrieve all meters installed at a given site, including the list of measurements and units they support
@@ -26,7 +25,6 @@ This API enables the following features:
 * Provide Performance Scores for a given site and read current and historical scores
 * Supported Types: Daily, Monthly, Average, Local Average 
 * Supported Categories: Energy, Water, Waste, Transportation, Human Experience, Re-Entry
-
 
 ## How it works
 
@@ -44,9 +42,7 @@ The following steps will explain how the API works,
 
 **Step 5:** Update the performance scores calculated for the given site back to SE 
 
-
 ![How it works](https://raw.githubusercontent.com/ecostruxure-openapi/public-images/main/energy-sustainability-scoring/how-it-works-new.png \"How it works\")
-
 
 # Documentation
     
@@ -78,7 +74,6 @@ This API supports the following authentication mechanism:
 ## Operations and Resource Model
 
 ![Operations and Resource Model diagram](https://raw.githubusercontent.com/ecostruxure-openapi/public-images/main/energy-sustainability-scoring/open-esx-energy-scoring.diagram.png \"Operations and Resource Model diagram\")
-
 
 ## Support
 
@@ -119,7 +114,6 @@ var callback = function(error, data, response) {
   }
 };
 api.listMeters(siteId, callback);
-
 
 ```
 ### Compile it yourself, here's how:
@@ -224,10 +218,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
-
 Authentication schemes defined for the API:
 ### Oauth2AuthCode
-
 
 - **Type**: OAuth
 - **Flow**: accessCode
